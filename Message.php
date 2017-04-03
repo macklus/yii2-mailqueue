@@ -31,6 +31,11 @@ class Message extends \yii\swiftmailer\Message
 
         $item = new Queue();
 
+        $item->from = is_array($this->getFrom()) ? key($this->getFrom()) : $this->getFrom();
+        $item->to = is_array($this->getTo()) ? key($this->getTo()) : $this->getTo();
+        $item->cc = is_array($this->getCC()) ? key($this->getCC()) : $this->getCC();
+        $item->bcc = is_array($this->getBcc()) ? key($this->getBcc()) : $this->getBcc();
+
         $item->subject = $this->getSubject();
         $item->attempts = 0;
         $item->swift_message = base64_encode(serialize($this));

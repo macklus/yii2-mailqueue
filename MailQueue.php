@@ -70,11 +70,13 @@ class MailQueue extends Mailer
 	 */
 	public $maxAttempts = 3;
 	
-	
+
+	public $defaultDelaySeconds = 0;
+
 	/**
 	 * @var boolean Purges messages from queue after sending
 	 */
-	public $autoPurge = true;
+	public $autoPurge = false;
 
 	/**
 	 * Initializes the MailQueue component.
@@ -91,6 +93,7 @@ class MailQueue extends Mailer
 	 */
 	public function process()
 	{
+
 		if (Yii::$app->db->getTableSchema($this->table) == null) {
 			throw new \yii\base\InvalidConfigException('"' . $this->table . '" not found in database. Make sure the db migration is properly done and the table is created.');
 		}
