@@ -1,5 +1,5 @@
 {
-	"name": "dantart/yii2-mailqueue",
+	"name": "macklus/yii2-mailqueue",
 	"description": "Email queue component for yii2 that works with yii2-swiftmailer.",
 	"keywords": ["yii2", "extension", "component", "email", "queue", "swiftmailer", "yii2-swiftmailer"],
 	"homepage": "https://github.com/dantart/yii2-mailqueue",
@@ -17,10 +17,10 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"dantart\\mailqueue\\": ""
+			"macklus\\mailqueue\\": ""
 		}
 	},
         "extra": {
-            "bootstrap": "dantart\\mailqueue\\Bootstrap"            
+            "bootstrap": "macklus\\mailqueue\\Bootstrap"            
         }
 }

@@ -6,7 +6,7 @@
  * @author Rochdi B. <rochdi80tn@gmail.com>
  */
 
-namespace dantart\mailqueue\commands;
+namespace macklus\mailqueue\commands;
 
 use yii\console\Controller;
 
